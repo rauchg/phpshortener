@@ -29,3 +29,4 @@ class PHPShortenerTrIm extends PHPShortenerService {
 	}
 	
 }
+?>

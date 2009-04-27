@@ -43,3 +43,4 @@ class PHPShortenerDiggCom extends PHPShortenerService {
 	}
 	
 }
+?>

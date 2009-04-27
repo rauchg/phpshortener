@@ -21,7 +21,8 @@ class PHPShortener {
 		'tinyurl.com',
 		'tr.im',
 		'twurl.nl',
-		'digg.com'
+		'digg.com',
+		'u.nu'
 	);
 	
 	/**
@@ -187,3 +188,4 @@ class PHPShortenerService {
 	}
 	
 }
+?>

@@ -47,6 +47,7 @@ function row($url, $service, $should_be, $is){
 		<?php row('http://google.com', 'tr.im', true, $s->encode('http://google.com', 'tr.im')) ?>		
 		<?php row('http://google.com', 'twurl.nl', true, $s->encode('http://google.com', 'twurl.nl')) ?>				
 		<?php row('http://google.com', 'digg.com', 'http://digg.com/d1nYVs', $s->encode('http://google.com', 'digg.com')) ?>				
+		<?php row('http://google.com', 'u.nu', 'http://u.nu/88', $s->encode('http://google.com', 'u.nu')) ?>						
 	</tbody>
 </table>
 
@@ -67,6 +68,7 @@ function row($url, $service, $should_be, $is){
 		<?php row('http://tr.im/jBte', 'tr.im', 'http://google.com/', $s->decode('http://tr.im/jBte')) ?>		
 		<?php row('http://twurl.nl/ubxmn0', 'twurl.nl', 'http://google.com', $s->decode('http://twurl.nl/ubxmn0')) ?>		
 		<?php row('http://digg.com/d1nYVs', 'digg.com', 'http://google.com', $s->decode('http://digg.com/d1nYVs')) ?>				
+		<?php row('http://u.nu/88', 'u.nu', 'http://google.com/', $s->decode('http://u.nu/88')) ?>						
 				
 		<?php row('is.gd/w', 'is.gd', 'http://google.com', $s->decode('is.gd/w')) ?>
 		<?php row('bit.ly/GH4Cn', 'bit.ly', 'http://google.com', $s->decode('bit.ly/GH4Cn')) ?>		
@@ -74,6 +76,7 @@ function row($url, $service, $should_be, $is){
 		<?php row('tr.im/jBte', 'tr.im', 'http://google.com/', $s->decode('tr.im/jBte')) ?>		
 		<?php row('twurl.nl/ubxmn0', 'twurl.nl', 'http://google.com', $s->decode('twurl.nl/ubxmn0')) ?>				
 		<?php row('digg.com/d1nYVs', 'digg.com', 'http://google.com', $s->decode('digg.com/d1nYVs')) ?>	
+		<?php row('u.nu/88', 'u.nu', 'http://google.com/', $s->decode('u.nu/88')) ?>						
 		
 		<?php row('www.tinyurl.com/2x6rgl', 'tinyurl.com', 'http://google.com', $s->decode('tinyurl.com/2x6rgl')) ?>				
 	</tbody>

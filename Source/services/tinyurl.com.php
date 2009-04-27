@@ -24,3 +24,4 @@ class PHPShortenerTinyurlCom extends PHPShortenerService {
 	}
 	
 }
+?>

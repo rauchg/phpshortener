@@ -31,3 +31,4 @@ class PHPShortenerBitLy extends PHPShortenerService {
 	}
 	
 }
+?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * is.gd adapter
+ * u.nu adapter
  *
  * @author Guillermo Rauch
  * @version $Id$
@@ -8,9 +8,11 @@
  * @package phpshortener
  **/
 
-class PHPShortenerIsGd extends PHPShortenerService {
+class PHPShortenerUNu extends PHPShortenerService {
 	
-	var $service = 'is.gd';
+	var $service = 'u.nu';
+	
+	var $apikey = false;
 	
 	/**
 	 * Encode function
@@ -20,7 +22,7 @@ class PHPShortenerIsGd extends PHPShortenerService {
 	 * @author Guillermo Rauch
 	 */
 	function encode($url){
-		return $this->fetch('http://is.gd/api.php?longurl=' . urlencode($url));
+		return trim($this->fetch('http://u.nu/unu-api-simple?url=' . urlencode($url)));
 	}
 	
 }
