@@ -20,7 +20,8 @@ class PHPShortener {
 		'is.gd',
 		'tinyurl.com',
 		'tr.im',
-		'twurl.nl'
+		'twurl.nl',
+		'digg.com'
 	);
 	
 	/**
@@ -36,13 +37,14 @@ class PHPShortener {
 	 *
 	 * @param string $url URL to encode
 	 * @param string $service Service to use from the supported above
-	 * @return string Short URL
+	 * @return string Shortened URL, or passed URL if couldn't be shortened
 	 * @author Guillermo Rauch
 	 */
 	function encode($url, $service = 'tr.im'){
 		if (!in_array($service, $this->services)) return false;
 		$adapter = $this->getAdapter($service);
-		return $adapter->encode($url);
+		$encoded = $adapter->encode($url);
+		return $encoded ? $encoded : $url;
 	}
 	
 	/**
@@ -129,6 +131,7 @@ class PHPShortenerService {
 			$c = curl_init();
       curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
       curl_setopt($c, CURLOPT_URL, $url);
+			curl_setopt($c, CURLOPT_USERAGENT, ini_get('user_agent') ? ini_get('user_agent') : 'PHP');
       $contents = curl_exec($c);
       curl_close($c);
 			return $contents;
